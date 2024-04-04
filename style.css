@@ -72,7 +72,7 @@ body {
 }
 .home-background {
     background-color: rgb(61, 61, 61);
-    background-image: url(img/background.jpg);
+    background-image: url(img/background-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
