@@ -1,0 +1,151 @@
+/*-----------------------------------------------------------------------------
+base.css                                                                  
+Enthält alle CSS Variabeln und grundlegende Regeln sowie zentrale helper. 
+
+Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
+----------------------------------------------------------------------------*/
+
+/* Fonts
+-----------------------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons/MaterialIcons-Regular.eot); 
+  src: local('Material Icons'),
+    local('MaterialIcons/MaterialIcons-Regular'),
+    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff2) format('woff2'),
+    url(../fonts/MaterialIcons/MaterialIcons-Regular.woff) format('woff'),
+    url(../fonts/MaterialIcons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+
+/* Variables
+-----------------------------------------------------------------------------*/
+
+:root {
+    /* 
+    Farben
+    ----------------------------------------*/
+    --color-mi-blau: rgb(73, 82, 225);
+    --color-mi-pink: #dd1166;
+    --color-mi-gruen: #00AD2F;
+    --color-mi-lila: #9313ce;
+    --color-mi-lila-light: #C8BBCE;
+    --color-mi-black: #231f20;
+    --color-mi-grau: #aaaaaa;
+    --color-text: #eee;
+    --color-headlines: #bbb;
+    --color-backgrounds: #000;
+    --color-borders: rgba(0, 0, 0, 0.3);
+    /* 
+    Abstände. Hierzu gibt es auch ein schönes Konzept
+    https://medium.com/eightshapes-llc/space-in-design-systems-188bcbae0d62 */
+    --content-width: 960px;
+    /*
+    Groessen
+    ----------------------------------------*/
+    --xxs: 0.25rem;
+    --xs:  0.5rem;
+    --s:   0.75rem;
+    --m:   1rem;
+    --l:   1.25rem;
+    --xl:   1.5rem;
+    --xxl:   2rem;
+
+    /*
+    Schrift
+    ----------------------------------------*/
+    --fontsize: 1em;
+    --fontsize-xs: 0.5rem;
+    --fontsize-s: 0.75rem;
+    --fontsize-l: 1.25rem;
+    --fontsize-xl: 1.5rem;
+    --fontsize-xxl: 2.5rem;
+
+    --font-family: Helvetica, Arial , Lucida, sans-serif;
+    --font-family-mono: Courier, Menlo, Consolas, monospace;
+    --font-family-condensed: Helvetica, Arial , Lucida, sans-serif;
+}
+
+
+
+/* Basic Styles 
+-----------------------------------------------------------------------------*/
+
+body {
+    font-size: 1.8rem;
+    color: var(--color-text);
+    background-color: var(--color-backgrounds);
+    font-family: var(--font-family);
+}
+
+li,
+a,
+p,
+td,
+th {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+
+/* helper 
+-----------------------------------------------------------------------------*/
+
+.hidden {
+    display: none !important;
+}
+
+
+/* Material Design Icons
+http://google.github.io/material-design-icons/
+-----------------------------------------------------------------------------*/
+
+.material-icons {
+  font-family:  'Material Icons';
+  font-style: normal;
+  padding-right: var(--space-inline-l);
+}
+
+
+/* Rules for sizing the icon. */
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.md-24 {
+    font-size: 24px;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.material-icons.md-48 {
+    font-size: 48px;
+}
+
+
+/* Rules for using icons as black on a light background. */
+
+.material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+
+/* Rules for using icons as white on a dark background. */
+
+.material-icons.md-light {
+    color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3);
+}

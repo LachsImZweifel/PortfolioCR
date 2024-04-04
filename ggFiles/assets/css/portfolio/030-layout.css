@@ -1,0 +1,123 @@
+/*----------------------------------------------------------------------------
+layout.css                                                                  
+Enthält alle Regeln zum Layout.  
+
+@media (min-width:600px) { }
+@media (min-width:801px) { }
+@media (min-width:1025px) {  }
+@media (min-width:1281px) { }
+----------------------------------------------------------------------------*/
+
+
+/* Main Header
+-----------------------------------------------------------------------------*/
+
+#l-mainHeader{
+  padding: var(--xxl);
+  background: var(--color-text);
+  color: var(--color-backgrounds);
+  margin-bottom: var(--xl);
+}
+
+.l-mainHeader-title{
+  margin-bottom: var(--xxl);
+  margin-bottom: var(--xxxl);
+  padding-bottom: var(--xxl);
+  text-transform: uppercase;
+  font-family: var(--font-family-mono);
+  color: var(--color-dark);
+  font-size: var(--xl);
+  line-height: 80%;
+}
+
+.l-mainHeader-title__content,
+.l-mainHeader-title__context,
+.l-mainHeader-title__author,
+.l-mainHeader-title__year{
+  display: block;
+  opacity: 0.3;
+}
+
+.l-mainHeader-title__context{
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.l-mainHeader-title__author{
+  color: var(--color-backgrounds);
+  opacity: 0.6;
+}
+
+.l-mainHeader-title__year{
+  color: var(--color-dark);
+  opacity: 0.6;
+}
+
+
+#l-mainHeader .m-portfolioItem-title{
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+#l-mainHeader .m-portfolioItem-subtitle{
+  color: var(--color-backgrounds);
+  opacity: 1;
+}
+
+#l-mainHeader figcaption p{
+  opacity: 0.8;
+}
+
+
+@media screen and (min-width:1281px) {
+  #l-mainHeader > *{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #l-mainHeader{
+    margin-bottom: var(--xxxl);
+  }
+}
+
+
+
+/* Main Footer
+-----------------------------------------------------------------------------*/
+
+#l-mainFooter{
+  padding: var(--xxl);
+  font-weight: var(--fw-light);
+  font-size: var(--fontsize-s);
+  margin-top: var(--xl);
+  background-color: #fff;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+@media screen and (min-width:1281px) {
+  #l-mainFooter {
+    padding-top: var(--m);
+    padding-bottom: var(--l);
+  }
+}
+
+
+/* Main Content
+-----------------------------------------------------------------------------*/
+
+#l-mainContent{
+  padding: var(--xxl);
+}
+
+@media screen and (min-width:1281px) {
+  #l-mainContent {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+
+

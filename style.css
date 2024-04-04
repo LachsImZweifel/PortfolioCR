@@ -88,8 +88,8 @@ body {
     background-position: center;
     color: white;
 
-    padding-top: 25vh;
-    padding-bottom: 25vh;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
 }
 .pattern-background {
     background-color: rgb(61, 61, 61);
@@ -272,4 +272,111 @@ h5{
     height: auto;
     padding: 8vh;
     color: rgb(194, 194, 194);
+}
+.cv-container a{
+    color: #c2c2c2;
+    font-size: 5vh;
+}
+.cv-container a:hover{
+    color:hsl(0, 0%, 60%)
+}
+.cv-container a:active{
+    color:hsl(0, 0%, 54%)
+}
+.round-image-container {
+    position: absolute;
+    top: 82%;
+    right: 25%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.round-image {
+    width: 40vh; /* Größe anpassen */
+    height: 40vh; /* Größe anpassen */
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+.slider-container{
+    padding: 2rem;
+}
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider {
+    display: flex;
+    aspect-ratio: 9 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.slider img {
+   flex: 1 0 100%;
+   scroll-snap-align: start;
+   object-fit: cover;
+}
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+    opacity: 1;
+}
+.description-container {
+    background-color: rgba(138, 43, 226, 0.5);
+    border-radius: 3vh;
+    margin: auto;
+    margin-top: 3vh;
+    margin-bottom: 25vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 48rem;
+    height: auto;
+    padding: 3vh;
+    color: rgb(194, 194, 194);
+}
+.description-container p{
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.4rem;
+    margin: 0;
+}
+.description-container h6{
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    font-size: 1.4rem;
+    margin: 0;
+    
+    margin-bottom: 1.4rem;
+}
+.description-container a{
+    color:hsl(0, 0%, 76%);
+}
+.description-container a:hover{
+    color:hsl(0, 0%, 60%);
+}
+.description-container a:active{
+    color:hsl(0, 0%, 54%)
 }

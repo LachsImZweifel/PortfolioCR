@@ -1,0 +1,47 @@
+/*----------------------------------------------------------------------------
+layout.css                                                                  
+Enthält alle übergreifenden typographischen Regeln.  
+
+Wer es noch schöner möchte, möge sich mal https://cssguidelin.es/ anschauen.
+----------------------------------------------------------------------------*/
+
+/* Navigation
+-----------------------------------------------------------------------------*/
+
+#nav{
+  position: sticky;
+  z-index: 1;
+}
+
+
+
+
+
+/* Section
+-----------------------------------------------------------------------------*/
+
+.section {
+    padding-bottom: var(--xl);
+}
+
+.section__header {
+    border-top: var(--color-borders) 1px dotted;
+    padding-top: var(--xxl);
+}
+
+
+/* Grid
+-----------------------------------------------------------------------------*/
+
+.grid {
+    display: grid;
+    grid-column-gap: var(--m);
+}
+
+.grid-is-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-is-2 {
+    grid-template-columns: 1fr 1fr;
+}

@@ -1,0 +1,227 @@
+/*-----------------------------------------------------------------------------
+base.css                                                                  
+Enthält alle CSS Variabeln und grundlegende Regeln.
+@media (min-width:600px) { }
+@media (min-width:801px) { }
+@media (min-width:1025px) {  }
+@media (min-width:1281px) { }
+----------------------------------------------------------------------------*/
+
+/* Fonts
+-----------------------------------------------------------------------------*/
+
+@font-face{
+  font-family:IBM_Plex_Sans;
+  font-style:normal;
+  font-weight:200;
+  src:url('../../fonts/IBM_Plex_Sans/IBMPlexSans-Light.ttf');
+}
+
+@font-face{
+  font-family:IBM_Plex_Sans;
+  font-style:normal;
+  font-weight:300;
+  src:url('../../fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf');
+}
+
+@font-face{
+  font-family:IBM_Plex_Sans;
+  font-style:normal;
+  font-weight:500;
+  src:url('../../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf');
+}
+
+
+@font-face{
+  font-family:IBM_Plex_Mono;
+  font-style:normal;
+  font-weight:600;
+  src:url('../../fonts/IBM_Plex_Mono/IBMPlexMono-SemiBold.ttf');
+}
+
+
+
+
+/* Variables
+-----------------------------------------------------------------------------*/
+
+:root {
+    /* 
+    Farben
+    ----------------------------------------*/
+    --color-text: #555;
+    --color-dark: #000;
+    --color-text-light: #999;
+    --color-headlines: #032F40;
+    --color-accent-hover: #032F40;
+    --color-accent: #04BFBF;
+    --color-backgrounds: #efefef;
+    --color-borders: rgba(0, 0, 0, 0.3);
+    --color-button-bg: rgba(0, 0, 0, 0.8);
+
+    /* Groessen
+    ----------------------------------------*/
+    --multiply: 0.2;
+
+    --xxs:  calc(1rem * var(--multiply));
+    --xs:   calc(2rem * var(--multiply));
+    --s:    calc(3rem * var(--multiply));
+    --m:    calc(5rem * var(--multiply));
+    --l:    calc(8rem * var(--multiply));
+    --xl:   calc(13rem * var(--multiply));
+    --xxl:  calc(21rem * var(--multiply));
+    --xxxl: calc(34rem * var(--multiply));
+
+    /*
+    Schrift
+    ----------------------------------------*/
+    --fontsize:     var(--m);
+    --fontsize-xs:  var(--xs);
+    --fontsize-s:   var(--s);
+    --fontsize-l:   var(--l);
+    --fontsize-xl:  var(--xl);
+    --fontsize-xxl: var(--xxl);
+    --font-family: IBM_Plex_Sans, Helvetica, Lucida, sans-serif;
+    --font-family-mono: IBM_Plex_Mono, Courier, monospace;
+
+    --maxwidth-text: 960px;
+    --maxwidth-text-l:1200px;
+
+    /* Font Weights */
+    --fw-light: 200;
+    --fw-medium: 300;
+    --fw-bold: 500;
+
+    /* Line Heights */
+    --lh-tight: 110%;
+    --lh-medium: 130%;
+    --lh-loose: 150%;
+
+    /* misc */
+    --radius: 0;
+    --shadow: 0 0 var(--xs) rgba(0,0,0,0.4);
+}
+
+
+
+
+
+
+/* Basic Styles & Bahavior
+-----------------------------------------------------------------------------*/
+html{
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+
+body {
+    font-weight: var(--fw-medium);
+    font-size: var(--fontsize);
+    color: var(--color-text);
+    background-color: var(--color-backgrounds);
+    font-family: var(--font-family);
+}
+
+@media only screen and (min-width: 600px) {
+  body{
+    font-size: var(--fontsize-l);
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  body{
+    font-size: var(--fontsize);
+  }
+}
+
+li,
+a,
+p,
+td,
+th {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Headlines
+----------------------------------------------------------------------------*/
+
+h1 {
+  font-size: var(--fontsize-xl);
+}
+
+h2 {
+  font-size: var(--fontsize-l);
+  color: var(--color-headlines);
+  margin-bottom: var(--xl);
+  line-height: var(--lh-tight);
+}
+
+h3 {
+  font-size: var(--fontsize);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--fontsize);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+
+h1, h2, h3{
+  font-weight: var(--fw-bold);
+}
+
+h3,
+h4 {
+  color: var(--color-dark);
+}
+
+
+h2+h3,
+h3:first-of-type {
+  padding-top: 0;
+}
+
+.title,
+.subtitle {
+  margin-bottom: var(--m);
+}
+
+.title+.subtitle {
+  margin-top: calc(var(--m) * -1); /*calc(var(--xs) - var(--m)); */
+}
+
+
+/* Mengentexte
+----------------------------------------------------------------------------*/
+
+p, li, td, th{
+  line-height: 130%;
+}
+
+.is-big {
+  font-size: 130%;
+}
+
+
+/* Links
+----------------------------------------------------------------------------*/
+
+a{
+color: var(--color-accent);
+text-decoration: none;
+display: inline-block;
+border-bottom: dotted 1px var(--color-text-light);
+overflow-wrap: break-word;
+word-wrap: break-word;
+hyphens: auto;
+}

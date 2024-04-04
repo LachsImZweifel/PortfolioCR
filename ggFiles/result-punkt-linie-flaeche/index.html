@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<!-- ############################################################################ 
+
+Kurs «Generative Gestaltung» an der TH Köln
+Christian Noss
+christian.noss@th-koeln.de
+https://twitter.com/cnoss
+https://cnoss.github.io/generative-gestaltung/
+    
+############################################################################ -->
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Generative Gestaltung // Starter Code</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://cnoss.github.io/generative-gestaltung/code/shared/img/favicon.ico">
+
+  <!-- Normalize -->
+  <link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="https://cnoss.github.io/generative-gestaltung/code/shared/css/010-resets.css">
+  <link rel="stylesheet" href="https://cnoss.github.io/generative-gestaltung/code/shared/css/020-base.css">
+  <link rel="stylesheet" href="https://cnoss.github.io/generative-gestaltung/code/shared/css/030-typography.css">
+  <link rel="stylesheet" href="https://cnoss.github.io/generative-gestaltung/code/shared/css/040-layout.css">
+  <link rel="stylesheet" href="https://cnoss.github.io/generative-gestaltung/code/shared/css/050-components.css">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans+Condensed:300,400|IBM+Plex+Sans:400,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav id="nav"></nav>
+  <!-- 
+    Available Canvas Modes: is-fixed, is-standard, is-fullscreen, is-16by9, is-small, is-large
+  -->
+  <main id="canvas" class="is-fixed"></main>
+  <aside id="console"></aside>
+  
+  <!-- p5 & p5.dom -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+
+  <!-- Audio Support -->
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script-->
+
+  <!-- Handtrack.js -->
+  <!--canvas id="canvasHT"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/handtrackjs/dist/handtrack.min.js"> </script-->
+
+  <!-- Tramontana -->
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://pierdr.github.io/Tramontana-for-Javascript/lib/tramontana_min.js"></script-->
+
+  <!-- GUI -->
+  <script src="https://cnoss.github.io/generative-gestaltung/code/shared/libs/quicksettings.js"></script>
+  <script src="https://cnoss.github.io/generative-gestaltung/code/shared/libs/p5.gui.js"></script>
+
+  <!-- Helper und Sketch -->
+  <script src="https://cnoss.github.io/generative-gestaltung/code/shared/js/helper.js"></script>
+  <script src="sketch.js"></script>
+
+</body>
+
+</html>

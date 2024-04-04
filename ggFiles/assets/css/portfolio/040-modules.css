@@ -1,0 +1,81 @@
+/* ----------------------------------------------------------------------------
+components.css                                                                  
+Enthält alle Regeln zu Module.  
+
+@media (min-width:600px) { }
+@media (min-width:801px) { }
+@media (min-width:1025px) {  }
+@media (min-width:1281px) { }
+----------------------------------------------------------------------------*/
+
+
+
+/* Portfolio Item
+-----------------------------------------------------------------------------*/
+
+.m-portfolioItem{
+  margin-bottom: var(--xxxl);
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (min-width: 801px) {
+  .m-portfolioItem{
+    display: grid;
+    grid-template-columns: 33% 1fr;
+    grid-column-gap: var(--xl);
+  }
+}
+
+.m-portfolioItem + .m-portfolioItem {
+  border-top: solid 1px var(--color-text-light);
+  padding-top: var(--xxxl);
+  margin-top: var(--xxxl);
+}
+
+.m-portfolioItem-title, .m-portfolioItem-subtitle{
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--m);
+}
+
+.m-portfolioItem-title{
+  margin-top: calc(var(--xxs) * -1);
+  opacity: 0.8;
+}
+
+.m-portfolioItem-title + .m-portfolioItem-subtitle{
+  margin-top: calc(var(--s) * -1);
+}
+
+.m-portfolioItem-image{
+  margin-bottom: var(--m);
+  border-radius: var(--radius);
+}
+
+
+/* Buttons
+-----------------------------------------------------------------------------*/
+
+.m-linkButton{
+  display: inline-block;
+  padding: var(--xs) var(--s);
+  color: var(--color-dark);
+  border: none;
+  border-left: solid var(--xxs) var(--color-accent-hover);
+  transition: all 0.4s;
+  font-weight: var(--fw-bold);
+  border-radius: var(--radius);
+  background: var(--color-accent);
+}
+
+.m-linkButton--invers{
+  color: var(--color-dark);
+}
+
+.m-linkButton:hover{
+  background: var(--color-accent-hover);
+  color: var(--color-backgrounds);
+  box-shadow: var(--shadow);
+  border-color: var(--color-accent);
+}
